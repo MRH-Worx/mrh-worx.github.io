@@ -1,0 +1,113 @@
+/* Saved by the Bell inspired palette + toggle button */
+body.saved-by-bell {
+  background-image: radial-gradient(circle at 20% 20%, #ffe066 0, #ffe066 10%, transparent 10%),
+    radial-gradient(circle at 80% 10%, #ff6bcb 0, #ff6bcb 12%, transparent 12%),
+    radial-gradient(circle at 10% 80%, #6bffe3 0, #6bffe3 14%, transparent 14%),
+    radial-gradient(circle at 80% 80%, #5c7cfa 0, #5c7cfa 15%, transparent 15%),
+    repeating-linear-gradient(135deg, #160f30 0, #160f30 20px, #1c1a4a 20px, #1c1a4a 40px);
+  color: #f4f4f4;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+body.saved-by-bell .navbar {
+  background: #ff5d8f;
+  border-bottom: 6px solid #ffe066;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+body.saved-by-bell .navbar-light .navbar-nav .nav-link,
+body.saved-by-bell .navbar-light .navbar-brand {
+  color: #120721 !important;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+body.saved-by-bell .page-link,
+body.saved-by-bell .post-preview,
+body.saved-by-bell .post,
+body.saved-by-bell footer,
+body.saved-by-bell .pagination,
+body.saved-by-bell .card,
+body.saved-by-bell .container-md {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  border-radius: 18px;
+}
+
+body.saved-by-bell a {
+  color: #ffe066;
+  text-decoration-color: #6bffe3;
+  font-weight: 600;
+}
+
+body.saved-by-bell h1,
+body.saved-by-bell h2,
+body.saved-by-bell h3,
+body.saved-by-bell h4 {
+  font-family: 'Futura', 'Impact', 'Arial Black', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #fefefe;
+}
+
+body.saved-by-bell .btn,
+body.saved-by-bell button,
+body.saved-by-bell .beautiful-btn {
+  background: linear-gradient(120deg, #ffe066, #ff6bcb, #5c7cfa);
+  color: #120721;
+  border: none;
+  box-shadow: 0 10px 20px rgba(16, 0, 30, 0.3);
+}
+
+body.saved-by-bell .post-preview .post-meta,
+body.saved-by-bell .post-date {
+  color: #f8f9ff;
+}
+
+body.saved-by-bell ::selection {
+  background: #ff6bcb;
+  color: #120721;
+}
+
+/* Hidden toggle button */
+.saved-by-bell-toggle {
+  position: fixed;
+  bottom: 18px;
+  right: 26px;
+  padding: 6px 12px;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 2px dashed #ffe066;
+  background: rgba(20, 20, 35, 0.6);
+  color: #ffe066;
+  border-radius: 999px;
+  opacity: 0.15;
+  transition: opacity 0.25s ease, transform 0.3s ease;
+  z-index: 999;
+}
+
+.saved-by-bell-toggle:focus,
+.saved-by-bell-toggle:hover {
+  opacity: 0.85;
+  transform: rotate(-6deg) scale(1.05);
+  outline: none;
+}
+
+body.saved-by-bell .saved-by-bell-toggle {
+  background: rgba(255, 255, 255, 0.85);
+  color: #120721;
+  border-color: #ff6bcb;
+  opacity: 0.9;
+}
+
+@keyframes confettiDrift {
+  0% { background-position: 0 0, 0 0, 0 0; }
+  50% { background-position: 20px 40px, -30px 20px, 10px -10px; }
+  100% { background-position: 0 0, 0 0, 0 0; }
+}
+
+body.saved-by-bell {
+  animation: confettiDrift 12s linear infinite;
+}
