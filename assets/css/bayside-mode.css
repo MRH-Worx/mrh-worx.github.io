@@ -77,8 +77,7 @@ body.saved-by-bell .post-preview,
 body.saved-by-bell .post,
 body.saved-by-bell footer,
 body.saved-by-bell .pagination,
-body.saved-by-bell .card,
-body.saved-by-bell .container-md {
+body.saved-by-bell .card {
   background: #fefefe;
   border-radius: 24px;
   border: 4px solid var(--bayside-black);
@@ -128,32 +127,51 @@ body.saved-by-bell .post-date {
 }
 
 body.saved-by-bell .posts-list {
-  padding: 2.5rem;
-  border-radius: 30px;
-  border: 4px solid var(--bayside-black);
-  background-color: #fdfdfd;
-  background-image:
-    linear-gradient(#bfbfbf 2px, transparent 2px),
-    linear-gradient(90deg, #bfbfbf 2px, transparent 2px),
-    radial-gradient(circle at 18% 24%, var(--bayside-pink) 0 28px, transparent 32px),
-    radial-gradient(circle at 78% 32%, var(--bayside-yellow) 0 35px, transparent 40px),
-    radial-gradient(circle at 36% 78%, var(--bayside-cyan) 0 32px, transparent 36px),
-    radial-gradient(circle at 65% 70%, var(--bayside-purple) 0 26px, transparent 30px),
-    repeating-linear-gradient(135deg, transparent 0 18px, rgba(0, 0, 0, 0.08) 18px 24px);
-  background-size:
-    60px 60px,
-    60px 60px,
-    360px 360px,
-    420px 420px,
-    380px 380px,
-    300px 300px,
-    140px 140px;
-  margin-bottom: 3rem;
+  padding: 2.5rem 1rem;
+  background: transparent;
+  border: none;
 }
 
 body.saved-by-bell ::selection {
   background: var(--bayside-pink);
   color: #fff;
+}
+
+body.saved-by-bell div[role="main"].container-md {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  padding: 3rem 2rem;
+  border-radius: 36px;
+  border: 6px solid var(--bayside-black);
+  background-color: #ffffff;
+  background-image:
+    linear-gradient(#bdbdbd 1.5px, transparent 1.5px),
+    linear-gradient(90deg, #bdbdbd 1.5px, transparent 1.5px),
+    radial-gradient(circle at 12% 15%, var(--bayside-pink) 0 28px, transparent 32px),
+    radial-gradient(circle at 80% 20%, var(--bayside-yellow) 0 36px, transparent 40px),
+    radial-gradient(circle at 25% 80%, var(--bayside-cyan) 0 32px, transparent 36px),
+    radial-gradient(circle at 72% 68%, var(--bayside-purple) 0 30px, transparent 34px),
+    conic-gradient(from 135deg at 35% 45%, var(--bayside-cyan) 0 30%, transparent 30% 100%),
+    conic-gradient(from 315deg at 70% 60%, var(--bayside-pink) 0 25%, transparent 25% 100%);
+  background-size:
+    70px 70px,
+    70px 70px,
+    340px 340px,
+    420px 420px,
+    360px 360px,
+    300px 300px,
+    260px 260px,
+    280px 280px;
+  background-position:
+    0 0,
+    0 0,
+    0 0,
+    0 0,
+    0 0,
+    0 0,
+    0 0,
+    0 0;
+  box-shadow: 18px 18px 0 rgba(0, 0, 0, 0.55);
 }
 
 /* zig-zag dividers */
