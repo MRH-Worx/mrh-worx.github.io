@@ -1,113 +1,140 @@
-/* Saved by the Bell inspired palette + toggle button */
+/* Memphis / Saved by the Bell inspired palette */
 body.saved-by-bell {
-  background-image: radial-gradient(circle at 20% 20%, #ffe066 0, #ffe066 10%, transparent 10%),
-    radial-gradient(circle at 80% 10%, #ff6bcb 0, #ff6bcb 12%, transparent 12%),
-    radial-gradient(circle at 10% 80%, #6bffe3 0, #6bffe3 14%, transparent 14%),
-    radial-gradient(circle at 80% 80%, #5c7cfa 0, #5c7cfa 15%, transparent 15%),
-    repeating-linear-gradient(135deg, #160f30 0, #160f30 20px, #1c1a4a 20px, #1c1a4a 40px);
-  color: #f4f4f4;
+  --bayside-pink: #ff4fa7;
+  --bayside-yellow: #ffe600;
+  --bayside-cyan: #19d7e8;
+  --bayside-purple: #b784ff;
+  --bayside-blue: #2418ff;
+  --bayside-black: #05020c;
+  color: #0d0a1c;
+  background-color: #fdfdfd;
+  background-image:
+    linear-gradient(#cfcfcf 1px, transparent 1px),
+    linear-gradient(90deg, #d3d3d3 1px, transparent 1px),
+    radial-gradient(circle at 15% 18%, rgba(255, 79, 167, 0.9) 0, rgba(255, 79, 167, 0.9) 10%, transparent 10%),
+    radial-gradient(circle at 70% 15%, rgba(25, 215, 232, 0.85) 0, rgba(25, 215, 232, 0.85) 13%, transparent 13%),
+    radial-gradient(circle at 30% 70%, rgba(183, 132, 255, 0.9) 0, rgba(183, 132, 255, 0.9) 8%, transparent 8%),
+    radial-gradient(circle at 82% 78%, rgba(255, 230, 0, 0.85) 0, rgba(255, 230, 0, 0.85) 12%, transparent 12%),
+    conic-gradient(from 140deg at 60% 55%, var(--bayside-cyan) 0 25%, transparent 25% 100%),
+    conic-gradient(from 320deg at 20% 45%, var(--bayside-pink) 0 30%, transparent 30% 100%),
+    conic-gradient(from 20deg at 85% 35%, var(--bayside-yellow) 0 35%, transparent 35% 100%);
+  background-size:
+    70px 70px,
+    70px 70px,
+    600px 600px,
+    520px 520px,
+    480px 480px,
+    560px 560px,
+    400px 400px,
+    440px 440px,
+    360px 360px;
+  animation: baysideShapes 18s linear infinite;
   transition: background 0.5s ease, color 0.5s ease;
 }
 
+@keyframes baysideShapes {
+  0% { background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0; }
+  50% { background-position: 5px 10px, 10px 5px, 30px 40px, -20px 30px, 15px -25px, -35px 25px, 20px -10px, -15px 20px, 10px -30px; }
+  100% { background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0; }
+}
+
 body.saved-by-bell .navbar {
-  background: #ff5d8f;
-  border-bottom: 6px solid #ffe066;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  background: var(--bayside-black);
+  border-bottom: 6px solid var(--bayside-cyan);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.45);
 }
 
 body.saved-by-bell .navbar-light .navbar-nav .nav-link,
 body.saved-by-bell .navbar-light .navbar-brand {
-  color: #120721 !important;
-  font-weight: 700;
+  color: #fff !important;
+  font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-body.saved-by-bell .page-link,
-body.saved-by-bell .post-preview,
+body.saved-by-bell .navbar-light .navbar-nav .nav-link:hover {
+  color: var(--bayside-yellow) !important;
+}
+
 body.saved-by-bell .post,
+body.saved-by-bell .post-preview,
+body.saved-by-bell .card,
 body.saved-by-bell footer,
 body.saved-by-bell .pagination,
-body.saved-by-bell .card,
 body.saved-by-bell .container-md {
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(6px);
-  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 22px;
+  border: 3px solid var(--bayside-black);
+  box-shadow: 12px 12px 0 rgba(5, 2, 12, 0.5);
 }
 
 body.saved-by-bell a {
-  color: #ffe066;
-  text-decoration-color: #6bffe3;
-  font-weight: 600;
+  color: var(--bayside-blue);
+  text-decoration-color: var(--bayside-pink);
+  font-weight: 700;
 }
 
 body.saved-by-bell h1,
 body.saved-by-bell h2,
 body.saved-by-bell h3,
 body.saved-by-bell h4 {
-  font-family: 'Futura', 'Impact', 'Arial Black', sans-serif;
+  font-family: 'Impact', 'Futura', 'Arial Black', sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #fefefe;
+  color: var(--bayside-black);
+  text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 body.saved-by-bell .btn,
 body.saved-by-bell button,
 body.saved-by-bell .beautiful-btn {
-  background: linear-gradient(120deg, #ffe066, #ff6bcb, #5c7cfa);
-  color: #120721;
-  border: none;
-  box-shadow: 0 10px 20px rgba(16, 0, 30, 0.3);
+  background: linear-gradient(120deg, var(--bayside-pink), var(--bayside-yellow), var(--bayside-cyan));
+  color: var(--bayside-black);
+  border: 3px solid var(--bayside-black);
+  border-radius: 12px;
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.5);
 }
 
 body.saved-by-bell .post-preview .post-meta,
 body.saved-by-bell .post-date {
-  color: #f8f9ff;
+  color: var(--bayside-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
 }
 
 body.saved-by-bell ::selection {
-  background: #ff6bcb;
-  color: #120721;
+  background: var(--bayside-pink);
+  color: #fff;
 }
 
-/* Hidden toggle button */
+/* Hidden toggle pill */
 .saved-by-bell-toggle {
   position: fixed;
-  bottom: 18px;
+  bottom: 20px;
   right: 26px;
-  padding: 6px 12px;
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
+  padding: 8px 16px;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  border: 2px dashed #ffe066;
-  background: rgba(20, 20, 35, 0.6);
-  color: #ffe066;
+  border: 2px dashed var(--bayside-yellow, #ffe600);
+  background: rgba(5, 2, 12, 0.6);
+  color: #ffe600;
   border-radius: 999px;
-  opacity: 0.15;
+  opacity: 0.12;
   transition: opacity 0.25s ease, transform 0.3s ease;
   z-index: 999;
 }
 
 .saved-by-bell-toggle:focus,
 .saved-by-bell-toggle:hover {
-  opacity: 0.85;
-  transform: rotate(-6deg) scale(1.05);
+  opacity: 0.95;
+  transform: rotate(-8deg) scale(1.08);
   outline: none;
 }
 
 body.saved-by-bell .saved-by-bell-toggle {
-  background: rgba(255, 255, 255, 0.85);
-  color: #120721;
-  border-color: #ff6bcb;
-  opacity: 0.9;
-}
-
-@keyframes confettiDrift {
-  0% { background-position: 0 0, 0 0, 0 0; }
-  50% { background-position: 20px 40px, -30px 20px, 10px -10px; }
-  100% { background-position: 0 0, 0 0, 0 0; }
-}
-
-body.saved-by-bell {
-  animation: confettiDrift 12s linear infinite;
+  background: #fff;
+  color: var(--bayside-black);
+  border-color: var(--bayside-pink);
+  opacity: 0.95;
 }
