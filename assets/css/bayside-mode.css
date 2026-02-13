@@ -100,7 +100,6 @@ body.saved-by-bell .post-title {
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--bayside-pink);
-  text-shadow: 6px 6px 0 rgba(0, 0, 0, 0.35);
 }
 
 body.saved-by-bell h2 { color: var(--bayside-yellow); }
